@@ -51,7 +51,7 @@
         let BuildShip (length:int) (name:string) = 
             let rnd = new System.Random()
             let startPoint = 
-                let rndPoint() = rnd.Next(gridSize - length)
+                let rndPoint() = rnd.Next(gridSize - length + 1)
                 new Point(rndPoint(), rndPoint())
             let orientation = match rnd.Next(2) with 
                                 | 0 -> Horizontal 
